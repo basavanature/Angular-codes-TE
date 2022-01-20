@@ -1,0 +1,29 @@
+<h1>Angular class</h1>
+
+<h2>{{value}}</h2>
+
+
+<input type="text" [value]="val" placeholder="text">
+
+<h3 [style.color]="isSpecial?c1:c2">style binding</h3>
+<p [class]="isSpecial?'para1':'para2'">class binding</p>
+<table border=" solid 2px" rules="all">
+    <tr>
+        <th [attr.colspan]="colval">Person</th>
+    </tr>
+    <tr>
+        <td>Virat</td>
+        <td>Kohli</td>
+    </tr>
+    <tr>
+        <td>rohit</td>
+        <td>sharama</td>
+    </tr>
+
+</table>
+<br>
+<button (click)="display()">Click me</button>
+<br>
+<input type="text" [(ngModel)]="displayResult" placeholder="enter a text">
+<h3>{{displayResult}}</h3>
+<!-- <app-login [valueChild]="val"></app-login> -->

@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<button (click)="change()">Change</button>
+<app-child (message)="getData($event)" *ngIf="flag"></app-child>
+<!-- event binding -->
+<!-- using event handeler and assigning the value to the class level variable  -->
+<h3>{{result}}</h3>

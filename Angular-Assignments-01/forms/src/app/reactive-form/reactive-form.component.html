@@ -1,0 +1,83 @@
+<h1 style="text-align: center;">Reactive-form</h1>
+<div class="container">
+    <form [formGroup]="submitForm" (ngSubmit)="SubmitForm()">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="First Name">First Name</label>
+                <input type="text" class="form-control" placeholder="First name" formControlName="fname" name="fname">
+                <span style="color: red;" *ngIf="fname?.invalid && fname?.touched">! please enter a valid name</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Last name">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last name" formControlName="lname" name="lname">
+                <span style="color: red;" *ngIf="lname?.invalid && lname?.touched">! please enter a valid name</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" formControlName="email" name="email">
+                <span style="color: red;" *ngIf="email?.invalid && email?.touched">! please enter a valid email</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" formControlName="pass" name="pass">
+                <span style="color: red;" *ngIf="pass?.invalid && pass?.touched">! please enter a valid password</span>
+            </div>
+        </div>
+        <div>
+            <label for="gender">Gender</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio1" value="Male">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio2" value="Female">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio3" value="Other">
+                <label class="form-check-label" for="inlineRadio3">Other</label>
+                <span style="color: red;" *ngIf="gender?.invalid && gender?.touched">! please select your gender</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address" name="address">
+            <span style="color: red;" *ngIf="address?.invalid && address?.touched">! please enter valid address</span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" formControlName="city" name="city">
+                <span style="color: red;" *ngIf="city?.invalid && city?.touched">! please enter valid City</span>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" formControlName="state" name="state">
+          <option value="AndhraPradesh">AndhraPradesh</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Tamilnadu">Tamilnadu</option>
+          <option value="Telangana">Telangana</option>
+        </select>
+                <br><span style="color: red;" *ngIf="state?.invalid && state?.touched">! please select a state</span>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" formControlName="zip" name="zip">
+                <span style="color: red;" *ngIf="zip?.invalid && zip?.touched">! please enter valid zip code</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check" name="check" value="agreed">
+                <label class="form-check-label" for="gridCheck">
+          Terms & Conditions
+        </label>
+                <br><span style="color: red;" *ngIf="check?.invalid && check?.touched">! please check the box</span>
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="submitForm?.invalid">Sign in</button>
+    </form>
+</div>

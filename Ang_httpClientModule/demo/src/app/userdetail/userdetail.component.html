@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address
+                    <tr>
+                        <th>Street</th>
+                        <th>Suite</th>
+                        <th>City</th>
+                    </tr>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of result">
+                <!-- also applied pipes -->
+                <td>{{data.id}}</td>
+                <td>{{data.name|titlecase}}</td>
+                <td>{{data.username|uppercase}}</td>
+                <td>{{data.email|lowercase}}</td>
+                <td>
+                    <tr>
+                        <td>{{data.address.street}}</td>
+                        <td>{{data.address.suite}}</td>
+                        <td>{{data.address.city}}</td>
+                </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

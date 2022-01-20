@@ -1,0 +1,21 @@
+<!-- <button (click)="toggleUser()">Toggle</button> -->
+<!-- <app-users *ngIf="flag"></app-users> -->
+<!-- <app-product></app-product> -->
+<table border="" rules=All>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Id</th>
+        <th>Salary</th>
+        <th>DOB</th>
+    </tr>
+    <tr *ngFor="let u of users">
+        <td>{{u.name|uppercase}}</td>
+        <td>{{u.city|titlecase}}</td>
+        <td>{{u.id}}</td>
+        <td>{{u.sal|currency:'INR'}}</td>
+        <td>{{u.dob|date:'dd/MM/yyyy'}}</td>
+        <td>{{u.dob|age}}</td>
+    </tr>
+</table>
+<h1>{{getdata}}</h1>

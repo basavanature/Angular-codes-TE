@@ -1,0 +1,17 @@
+<app-child>
+</app-child>
+<h2>*ngSwitch</h2>
+<div [ngSwitch]="selectOption">
+    <div *ngSwitchCase="'option-01'">
+        <p>option 1</p>
+    </div>
+    <div *ngSwitchCase="'option-02'">
+        <p>option 2</p>
+    </div>
+    <div *ngSwitchCase="'option-03'">
+        <p>option 3</p>
+    </div>
+    <div *ngSwitchDefault>
+        <p>No option selected</p>
+    </div>
+</div>

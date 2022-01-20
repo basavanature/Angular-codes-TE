@@ -1,0 +1,30 @@
+<app-parent></app-parent>
+<hr>
+<button (click)="change()">click to Change</button>
+<p *ngIf="flag">TechnoElevate</p>
+<hr>
+<table border="" rules="all">
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+    </tr>
+</table>
+<hr>
+<ul *ngFor="let user of users">
+    <li>{{user.name}} - {{user.age}}</li>
+</ul>
+<hr>
+<div [ngSwitch]="selectedcountry">
+    <div *ngSwitchCase="'India'">
+        <h3>India has been selected</h3>
+    </div>
+    <div *ngSwitchCase="'USA'">
+        <h3>USA has been selected</h3>
+    </div>
+    <div *ngSwitchCase="'UK'">
+        <h3>UK has been selected</h3>
+    </div>
+    <div *ngSwitchDefault>
+        <h3>No Country has been selected</h3>
+    </div>
+</div>

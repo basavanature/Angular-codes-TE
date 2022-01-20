@@ -1,0 +1,28 @@
+<p>This regestration component</p>
+<div class="container">
+    <div class="col-md-6">
+        <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)" id="ngForm">
+            <div class="form-group">
+                <label for="FirstName">First Name</label>
+                <input #fname="ngModel" required minlength="6" maxlength="15" pattern="^[a-zA-Z]+$" type="text" class="form-control" name="fname" ngModel>
+                <span *ngIf="fname.invalid && fname.touched" style="color: red;">Enter a valid name</span>
+
+            </div>
+            <div class="form-group">
+                <label for="LastName">Last Name</label>
+                <input #lname="ngModel" type="text" class="form-control" name="lname" required minlength="6" maxlength="15" pattern="[a-zA-Z]+$" ngModel>
+                <span *ngIf="lname.invalid && lname.touched" style="color: red;">Enter a valid name</span>
+
+            </div>
+            <div class="form-group">
+                <div ngModelGroup="address">
+                    <input type="text" name="city" #city="ngModel" class="form-group" ngModel placeholder="Enter the city">
+                    <input type="text" name="state" #state="ngModel" class="form-group" ngModel placeholder="Enter the state">
+                </div>
+
+            </div>
+            <button [disabled]="regForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+<h2>{{regForm.value|json}}</h2>

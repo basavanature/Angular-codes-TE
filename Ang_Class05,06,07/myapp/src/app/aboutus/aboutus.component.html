@@ -1,0 +1,27 @@
+<!-- <h1>content from aboutus component</h1> -->
+<!--<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of val">
+                <td>{{v.name}}</td>
+                <td>{{v.department}}</td>
+                <td>{{v.id}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+<form>
+    <div class="container">
+        <label for="name"><b> Employee Name</b></label>
+        <input type="text" class="form-control" placeholder="Employee name" id="username" name="username" #username><br>
+        <button type="button" class="btn btn-secondary" (click)="idGenerator()">Create ID</button><br>
+        <h3>{{ID}}</h3>
+    </div>
+</form>

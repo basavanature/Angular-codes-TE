@@ -1,0 +1,23 @@
+<hr>
+<hr>
+<h1>One Way Data Binding</h1>
+<hr>
+<hr>
+<p>{{value}}</p>
+<hr>
+<input type="text" [value]="val" placeholder="text">
+<hr>
+<h5 [class]="isSpecial?'pare1':'para2'">class binding</h5>
+<hr>
+<h3 [style.color]="isSpecial?c1:c2">style binding</h3>
+<hr>
+<h2>Event Binding</h2>
+<button (click)="display()">click me</button>
+<p>{{v}}</p>
+<hr>
+<hr>
+<h1>Two Way Data Binding</h1>
+<hr>
+<hr>
+<input type="text" [(ngModel)]="showResult" placeholder="text">
+<p>{{showResult}}</p>

@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<button (click)="toggleChild()">click to destroy child</button>
+<div>
+    <h3 #header>TechnoElevate</h3>
+    <p #header>Angular class</p>
+</div>
+<app-child *ngIf="flag"></app-child>

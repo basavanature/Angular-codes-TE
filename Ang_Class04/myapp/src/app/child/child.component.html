@@ -1,0 +1,11 @@
+<!-- <p>child works!</p> -->
+<div>
+    <ng-content select=".header"></ng-content>
+    <table border="" rules="all">
+        <tr *ngFor="let p of product">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+        </tr>
+    </table>
+    <ng-content select=".link"></ng-content>
+</div>
