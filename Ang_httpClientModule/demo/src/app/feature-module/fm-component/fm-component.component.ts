@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FMComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log("feature module component");
+    
+  }
 
   ngOnInit(): void {
   }

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
 //importe the feature module
-import { FeatureModuleModule } from './feature-module/feature-module.module';
+// import { FeatureModuleModule } from './feature-module/feature-module.module';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { FeatureModuleModule } from './feature-module/feature-module.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,//added to imports
-    FeatureModuleModule//included the imported feature module in imports[]
+    // FeatureModuleModule//included the imported feature module in imports[]
   ],
   providers: [],
   bootstrap: [AppComponent]
